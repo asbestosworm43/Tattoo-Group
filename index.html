@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'prompt', sans-serif;
+            color: white;
+            background: #202731;
+            overflow-x: hidden;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 600px;
+            padding: 100px 20vw;
+        }
+
+        .blue {
+            background: #3c33dd;
+        }
+
+        .green {
+            background: #2dca4b;
+        }
+
+        .pink {
+            background: #ff0066;
+            background-image: url("Images/waves-.svg");
+            aspect-ratio: 960/540;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .dark {
+            background: #0f0f10;
+            background-image: url("Images/tatt-back.svg");
+            aspect-ratio: 960/540;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .grey {
+            background: #2dca4b;
+        }
+
+        .curve-red {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve-red::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #2dca4b;
+            transform: translate(85%, 60%);
+        }
+
+        .curve-red::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3c31dd;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        .curve-blue {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve-blue::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3c31dd;
+            transform: translate(-6%, -310%);
+        }
+
+        .curve-blue::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #2dca4b;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        .bubble::after {
+            content: '';
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+            position: absolute;
+            bottom: 0;
+            height: 85%;
+            width: 100%;
+            background-color: #0f0f10;
+            z-index: -1;
+        }
+
+        .spacer {
+            aspect-ratio: 960/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url("Images/waves-.svg");
+        }
+
+        .layer2 {
+            background-image: url("Images/waves-.svg");
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+        .blob-motion {
+            position: absolute;
+            transform: translateY(-10%);
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="blue">
+        <h1>Tattoo-Web-Assignment</h1>
+        <p></p>
+        <div class="curve-red"></div>
+    </section>
+
+
+    <section class="green">
+        <h1>Gallery</h1>
+        <p></p>
+        <div class="curve-blue"></div>
+    </section>
+
+    <section class="pink">
+        <h1>About-Us</h1>
+        <p></p>
+    </section>
+
+
+    <section class="dark">
+        <h1>Contact-Us</h1>
+        <p></p>
+    </section>
+
+    <section class="bubble">
+        <h4>"Footer"</h4>
+        <p></p>
+    </section>
+
+    <div class="spacer layer2 flip"></div>
+    <section class="grey">
+        <h1>Random</h1>
+        <p></p>
+
+        <svg id="visual" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(450.8045221423123 144.04293640319094)">
+                <path id="blob1"
+                    d="M67.4 -64.6C83.9 -50.9 91.5 -25.5 90.4 -1.1C89.3 23.3 79.7 46.7 63.2 64C46.7 81.3 23.3 92.7 3.4 89.3C-16.6 85.9 -33.2 67.8 -51.9 50.5C-70.7 33.2 -91.6 16.6 -92.1 -0.6C-92.7 -17.7 -72.9 -35.4 -54.1 -49C-35.4 -62.7 -17.7 -72.3 3.9 -76.2C25.5 -80.1 50.9 -78.2 67.4 -64.6"
+                    fill="#BB004B"></path>
+            </g>
+           
+            <g transform="translate(446.8210369252897 150.84417370213154)">
+                <path id="blob2"
+                    d="M58.3 -56.1C77.1 -39.6 94.8 -19.8 93.4 -1.4C92 17 71.4 33.9 52.7 51.1C33.9 68.3 17 85.6 0.2 85.4C-16.6 85.2 -33.2 67.5 -50 50.3C-66.8 33.2 -83.9 16.6 -86.7 -2.8C-89.5 -22.2 -78 -44.3 -61.1 -60.8C-44.3 -77.3 -22.2 -88.2 -1.2 -87C19.8 -85.8 39.6 -72.6 58.3 -56.1" fill="#BB004B"></path></g>
+
+        </svg>
+
+        <script>
+            const tween= KUTE.fromTo(
+                "#blob1", 
+                { path: "#blob1 "}, 
+                { path: "#blob2 "},
+                { repeat: 999, duration: 3000, yoyo: true }
+            )
+
+            tween.start()
+        </script>
+
+    </section>
+    <div class="spacer layer2 "></div>
+
+    <section>
+        <h1>=</h1>
+        <p></p>
+    </section>
+
+
+</body>
+
+</html>
